@@ -15,11 +15,11 @@ namespace ChessGame
         }
         #endregion
 
-        [SerializeField] private Color blackPieceColor;
-        [SerializeField] private Color whitePieceColor;
-        [SerializeField] private Color activeColor;
-        [SerializeField] private Color blackBoardColor;
-        [SerializeField] private Color whiteBoardColor;
+        public Color blackPieceColor;
+        public Color whitePieceColor;
+        public Color activeColor;
+        public Color blackBoardColor;
+        public Color whiteBoardColor;
 
 
     }
