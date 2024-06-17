@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -232,18 +233,25 @@ public class BoardManager : MonoBehaviour
 
     private void UpdateSelection()
     {
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if(Physics.Raycast(ray, out hit, 25.0f, LayerMask.GetMask("ChessPlane")))
+        try
         {
-            // Debug.Log(hit.point);
-            selectionX = (int)(hit.point.x + 0.5f);
-            selectionY = (int)(hit.point.z + 0.5f);
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 25.0f, LayerMask.GetMask("ChessPlane")))
+            {
+                // Debug.Log(hit.point);
+                selectionX = (int)(hit.point.x + 0.5f);
+                selectionY = (int)(hit.point.z + 0.5f);
+            }
+            else
+            {
+                selectionX = -1;
+                selectionY = -1;
+            }
         }
-        else
+        catch (Exception e)
         {
-            selectionX = -1;
-            selectionY = -1;
+          
         }
     }
 
