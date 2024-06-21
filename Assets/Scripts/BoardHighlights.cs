@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ChessGame;
 using UnityEngine;
 
 public class BoardHighlights : MonoBehaviour
@@ -17,11 +18,21 @@ public class BoardHighlights : MonoBehaviour
     private GameObject[,] RedTiles = new GameObject[8, 8];
     private GameObject[,] PurpleTiles = new GameObject[8, 8];
     private GameObject[,] CheckTiles = new GameObject[8, 8];
+    
+    
 
     private void Start()
     {
         Instance = this;
         PlaceAllTiles();
+        
+        GameView.Instance.ChangeTurn(BoardManager.Instance.IsWhiteTurn);
+        BoardManager.Instance.TurnChanged = TurnChanged;
+    }
+
+    private void TurnChanged(bool obj)
+    {
+        GameView.Instance.ChangeTurn(obj);
     }
 
     public void PlaceAllTiles()

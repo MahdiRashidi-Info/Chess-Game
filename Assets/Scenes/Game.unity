@@ -1835,7 +1835,6 @@ MonoBehaviour:
   WhiteRook2: {fileID: 0}
   BlackRook1: {fileID: 0}
   BlackRook2: {fileID: 0}
-  isWhiteTurn: 1
 --- !u!4 &726900027
 Transform:
   m_ObjectHideFlags: 0
@@ -1864,7 +1863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c52df3bd1ac0c2478fc161e4d67f413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  averageResponseTime: 0
+  averageResponseTime: 5
 --- !u!1 &728544395
 GameObject:
   m_ObjectHideFlags: 0
@@ -2449,6 +2448,7 @@ GameObject:
   - component: {fileID: 946536555}
   - component: {fileID: 946536559}
   - component: {fileID: 946536560}
+  - component: {fileID: 946536561}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2569,6 +2569,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 445850008}
+--- !u!114 &946536561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946536554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b0af6836e3453fa62930c536f1aa27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPlayer: {fileID: 969406102}
+  secondPlayer: {fileID: 1514665161}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,6 +2684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 969406101}
+  - component: {fileID: 969406102}
   m_Layer: 5
   m_Name: OtherProfile
   m_TagString: Untagged
@@ -2698,6 +2713,22 @@ RectTransform:
   m_AnchoredPosition: {x: -420, y: -173}
   m_SizeDelta: {x: 734.07007, y: 267.36}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &969406102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969406100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726fe11ef9a842eb9c7d4d1c8c86a6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  username: {fileID: 1548319862}
+  avatar: {fileID: 1729386580}
+  circleFrame: {fileID: 1522291428}
+  resetColor: {r: 0.35686275, g: 0.35686275, b: 0.35686275, a: 1}
 --- !u!1 &974394142
 GameObject:
   m_ObjectHideFlags: 0
@@ -3696,6 +3727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1514665160}
+  - component: {fileID: 1514665161}
   m_Layer: 5
   m_Name: MyProfile
   m_TagString: Untagged
@@ -3724,6 +3756,22 @@ RectTransform:
   m_AnchoredPosition: {x: 411, y: 186}
   m_SizeDelta: {x: 734.07, y: 267.36}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1514665161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514665159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726fe11ef9a842eb9c7d4d1c8c86a6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  username: {fileID: 1548319862}
+  avatar: {fileID: 1729386580}
+  circleFrame: {fileID: 1522291428}
+  resetColor: {r: 0.35686275, g: 0.35686275, b: 0.35686275, a: 1}
 --- !u!1 &1518457946 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6869629127597136921, guid: 4d69b729949d4fa45a82277944f3815c, type: 3}

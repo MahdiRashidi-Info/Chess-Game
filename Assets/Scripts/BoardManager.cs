@@ -39,7 +39,21 @@ public class BoardManager : MonoBehaviour
     private int selectionY = -1;
 
     // Variable to store turn
-    public bool isWhiteTurn = true;
+    
+    public Action<bool> TurnChanged;
+    private bool _isWhiteTurn;
+    public bool IsWhiteTurn
+    {
+        get => _isWhiteTurn;
+        set
+        {
+            if (_isWhiteTurn != value)
+            {
+                _isWhiteTurn = value;
+                TurnChanged?.Invoke(value);
+            }
+        }
+    }
 
     private void Start()
     {
@@ -62,7 +76,7 @@ public class BoardManager : MonoBehaviour
         DrawChessBoard();
 
         // Select/Move chessman on mouse click & it is Player's turn : White
-        if(Input.GetMouseButtonDown(0) && isWhiteTurn)
+        if(Input.GetMouseButtonDown(0) && IsWhiteTurn)
         {
             if (selectionX >= 0 && selectionY >= 0 && selectionX <= 7 && selectionY <= 7)
             {
@@ -79,7 +93,7 @@ public class BoardManager : MonoBehaviour
             }
         }
         // // If it is NPC's turn : Black
-        else if(!isWhiteTurn)
+        else if(!IsWhiteTurn)
         {
             // NPC will make a move
             ChessAI.Instance.NPCMove();
@@ -92,7 +106,7 @@ public class BoardManager : MonoBehaviour
         // if no chessman is on the clicked tile
         if (Chessmans[selectionX, selectionY] == null) return;
         // if it is not the turn of the selected chessman's team
-        if (Chessmans[selectionX, selectionY].isWhite != isWhiteTurn) return;
+        if (Chessmans[selectionX, selectionY].isWhite != IsWhiteTurn) return;
 
         // Selecting chessman with yellow highlight
         SelectedChessman = Chessmans[selectionX, selectionY];
@@ -100,7 +114,7 @@ public class BoardManager : MonoBehaviour
 
         // Allowed moves highlighted in blue and enemy in Red
         allowedMoves = SelectedChessman.PossibleMoves();
-        BoardHighlights.Instance.HighlightPossibleMoves(allowedMoves, isWhiteTurn);
+        BoardHighlights.Instance.HighlightPossibleMoves(allowedMoves, IsWhiteTurn);
     }
 
     public void MoveChessman(int x, int y)
@@ -120,7 +134,7 @@ public class BoardManager : MonoBehaviour
             // If it is an EnPassant move than Destroy the opponent
             if (EnPassant[0] == x && EnPassant[1] == y && SelectedChessman.GetType() == typeof(Pawn))
             {
-                if(isWhiteTurn)
+                if(IsWhiteTurn)
                     opponent = Chessmans[x, y + 1];
                 else
                     opponent = Chessmans[x, y - 1];
@@ -199,7 +213,7 @@ public class BoardManager : MonoBehaviour
             SelectedChessman.SetPosition(x, y);
             SelectedChessman.transform.position = new Vector3(x, 0, y);
             SelectedChessman.isMoved = true;
-            isWhiteTurn = !isWhiteTurn;
+            IsWhiteTurn = !IsWhiteTurn;
 
             // to be deleted
             // printBoard();
@@ -213,7 +227,7 @@ public class BoardManager : MonoBehaviour
         // ------- King Check Alert Manager -----------
         // Is it Check to the King
         // If now White King is in Check
-        if(isWhiteTurn)
+        if(IsWhiteTurn)
         {
             if(WhiteKing.InDanger())
                 BoardHighlights.Instance.SetTileCheck(WhiteKing.currentX, WhiteKing.currentY);
@@ -358,7 +372,7 @@ public class BoardManager : MonoBehaviour
 
     public void EndGame()
     {
-        if (!isWhiteTurn)
+        if (!IsWhiteTurn)
             Debug.Log("White team wins");
         else
             Debug.Log("Black team wins");
@@ -367,7 +381,7 @@ public class BoardManager : MonoBehaviour
             Destroy(go);
 
         // New Game
-        isWhiteTurn = true;
+        IsWhiteTurn = true;
         BoardHighlights.Instance.DisableAllHighlights();
         SpawnAllChessmans();
     }
@@ -377,7 +391,7 @@ public class BoardManager : MonoBehaviour
         bool hasAllowedMove = false;
         foreach(GameObject chessman in ActiveChessmans)
         {
-            if(chessman.GetComponent<Chessman>().isWhite != isWhiteTurn)
+            if(chessman.GetComponent<Chessman>().isWhite != IsWhiteTurn)
                 continue;
 
             bool[,] allowedMoves = chessman.GetComponent<Chessman>().PossibleMoves();
@@ -398,7 +412,7 @@ public class BoardManager : MonoBehaviour
 
         if(!hasAllowedMove) 
         {
-            BoardHighlights.Instance.HighlightCheckmate(isWhiteTurn);
+            BoardHighlights.Instance.HighlightCheckmate(IsWhiteTurn);
 
             Debug.Log("CheckMate");
 

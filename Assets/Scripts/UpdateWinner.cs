@@ -16,7 +16,7 @@ public class UpdateWinner : MonoBehaviour
     {
     	if(!updated)
     	{
-    		if(BoardManager.Instance.isWhiteTurn)
+    		if(BoardManager.Instance.IsWhiteTurn)
 	    		winner.text = "Black Team Wins!!";
 	    	else
 	    		winner.text = "White Team Wins!!";
