@@ -2,7 +2,7 @@ using System;
 using RTLTMPro;
 using UnityEngine;
 
-namespace ChessGame
+namespace ChessGame.UserInterface.Views
 {
     public class MainMenuView : MonoBehaviour
     {

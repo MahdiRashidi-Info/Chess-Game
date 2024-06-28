@@ -1,4 +1,4 @@
-﻿namespace Pieces
+﻿namespace ChessGame.Pieces
 {
     public class Bishup : Chessman
     {

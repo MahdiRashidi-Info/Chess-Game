@@ -1,12 +1,11 @@
 using System;
-using Extensions;
-using RTLTMPro;
+using ChessGame.Extensions;
+using ChessGame.UserInterface.Components;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UserInterface.Components;
 
-namespace ChessGame
+namespace ChessGame.UserInterface.Views
 {
     public class GameView : MonoBehaviour
     {

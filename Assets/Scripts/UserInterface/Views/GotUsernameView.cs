@@ -1,10 +1,10 @@
 using System;
-using Extensions;
+using ChessGame.Extensions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ChessGame
+namespace ChessGame.UserInterface.Views
 {
     public class GotUsernameView : MonoBehaviour
     {

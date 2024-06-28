@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using Extensions;
+using ChessGame.Extensions;
 using RTLTMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ChessGame
+namespace ChessGame.UserInterface.Views
 {
     public class ShopView : MonoBehaviour
     {

@@ -1,8 +1,8 @@
-using Extensions;
+using ChessGame.Extensions;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ChessGame
+namespace ChessGame.UserInterface.Views
 {
     public class RateView : MonoBehaviour
     {

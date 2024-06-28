@@ -1,9 +1,9 @@
-using ChessGame;
-using Extensions;
+using ChessGame.Extensions;
+using ChessGame.UserInterface.Views;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UserInterface.Controllers
+namespace ChessGame.UserInterface.Controllers
 {
     public class SettingController : MonoBehaviour
     {

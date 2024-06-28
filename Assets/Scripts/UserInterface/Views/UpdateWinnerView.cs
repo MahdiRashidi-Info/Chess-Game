@@ -1,28 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class UpdateWinnerView : MonoBehaviour
+namespace ChessGame.UserInterface.Views
 {
-	public static UpdateWinnerView Instance { set; get; }
+	public class UpdateWinnerView : MonoBehaviour
+	{
+		public static UpdateWinnerView Instance { set; get; }
 
-	public Text winner;
+		public Text winner;
 
-	private bool updated = false;
+		private bool updated = false;
 
-    // Start is called before the first frame update
-    void Update()
-    {
-    	if(!updated)
-    	{
-    		if(BoardManager.Instance.IsWhiteTurn)
-	    		winner.text = "Black Team Wins!!";
-	    	else
-	    		winner.text = "White Team Wins!!";
+		// Start is called before the first frame update
+		void Update()
+		{
+			if(!updated)
+			{
+				if(BoardManager.Instance.IsWhiteTurn)
+					winner.text = "Black Team Wins!!";
+				else
+					winner.text = "White Team Wins!!";
 
-	    	updated = true;
-    	}
+				updated = true;
+			}
 	    	
-    }
+		}
+	}
 }

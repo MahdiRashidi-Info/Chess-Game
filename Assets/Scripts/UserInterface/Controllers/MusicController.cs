@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace UserInterface.Controllers
+namespace ChessGame.UserInterface.Controllers
 {
     public class MusicController : MonoBehaviour
     {
