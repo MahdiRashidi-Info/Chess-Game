@@ -1,10 +1,9 @@
-using System;
-using ChessGame.Extensions;
+using ChessGame;
+using Extensions;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace ChessGame
+namespace UserInterface.Controllers
 {
     public class MainMenuController : MonoBehaviour
     {

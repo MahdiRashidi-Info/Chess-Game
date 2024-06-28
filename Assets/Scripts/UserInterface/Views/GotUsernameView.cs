@@ -1,5 +1,5 @@
 using System;
-using ChessGame.Extensions;
+using Extensions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

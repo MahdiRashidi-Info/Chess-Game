@@ -4,6 +4,7 @@ using ChessGame;
 using RTLTMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UserInterface.Components;
 
 public class GameOverView : MonoBehaviour
 {

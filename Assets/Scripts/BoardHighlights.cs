@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using ChessGame;
+using Pieces;
 using UnityEngine;
 
 public class BoardHighlights : MonoBehaviour

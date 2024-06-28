@@ -1,4 +1,4 @@
-using ChessGame.Extensions;
+using Extensions;
 using UnityEngine;
 using UnityEngine.UI;
 

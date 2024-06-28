@@ -1,9 +1,10 @@
 using System;
-using ChessGame.Extensions;
+using Extensions;
 using RTLTMPro;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UserInterface.Components;
 
 namespace ChessGame
 {

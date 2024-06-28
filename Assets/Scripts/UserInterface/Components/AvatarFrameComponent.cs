@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ChessGame
+namespace UserInterface.Components
 {
     public class AvatarFrameComponent : MonoBehaviour
     {

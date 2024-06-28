@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using ChessGame.Extensions;
+using Extensions;
 using RTLTMPro;
 using UnityEngine;
 using UnityEngine.UI;

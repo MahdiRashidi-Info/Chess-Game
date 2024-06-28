@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Pieces;
 using UnityEngine;
 
 public abstract class Chessman : MonoBehaviour

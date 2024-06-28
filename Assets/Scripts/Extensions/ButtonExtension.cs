@@ -1,7 +1,7 @@
 using System;
 using UnityEngine.UI;
 
-namespace ChessGame.Extensions
+namespace Extensions
 {
     public static class ButtonExtension
     {
