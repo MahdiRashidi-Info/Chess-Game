@@ -13,6 +13,9 @@ namespace ChessGame
 
         private void Awake()
         {
+            
+            // ResetCache();
+            
             DontDestroyOnLoad(this);
             
             SceneManager.sceneLoaded += SceneManagerOnLoaded;
@@ -30,7 +33,12 @@ namespace ChessGame
                 }
             }
         }
-        
+
+        public void ResetCache()
+        {
+            PlayerPrefs.DeleteAll();
+
+        }
         
     }
 }

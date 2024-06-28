@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using ChessGame;
@@ -26,8 +27,12 @@ public class BoardHighlights : MonoBehaviour
         Instance = this;
         PlaceAllTiles();
         
-        GameView.Instance.ChangeTurn(BoardManager.Instance.IsWhiteTurn);
-        BoardManager.Instance.TurnChanged = TurnChanged;
+        try
+        {
+            GameView.Instance.ChangeTurn(BoardManager.Instance.IsWhiteTurn);
+            BoardManager.Instance.TurnChanged = TurnChanged;
+        }
+        catch {}
     }
 
     private void TurnChanged(bool obj)

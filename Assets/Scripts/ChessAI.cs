@@ -56,10 +56,6 @@ public class ChessAI : MonoBehaviour
         System.Diagnostics.Stopwatch stopwatch  = new System.Diagnostics.Stopwatch();
         stopwatch.Start();
 
-        // detail = "Start:\n";
-        // board = "Current Actual Board :\n";
-        // printBoard();
-
         // New State History Stack
         History = new Stack< State>();
 

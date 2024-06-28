@@ -17,12 +17,16 @@ public class BoardManager : MonoBehaviour
 
     // List of Chessman prefabs
     public List<GameObject> ChessmanPrefabs;
+
     // List of chessmans being on the board
     private List<GameObject> ActiveChessmans;
+
     // Array of the chessmans present on the particular board cell
-    public Chessman[,] Chessmans{ set; get; }
+    public Chessman[,] Chessmans { set; get; }
+
     // Currently Selected Chessman
     public Chessman SelectedChessman;
+
     // Kings
     public Chessman WhiteKing;
     public Chessman BlackKing;
@@ -33,6 +37,7 @@ public class BoardManager : MonoBehaviour
 
     // Allowed moves
     public bool[,] allowedMoves;
+
     // EnPassant move
     public int[] EnPassant { set; get; }
 
@@ -41,9 +46,10 @@ public class BoardManager : MonoBehaviour
     private int selectionY = -1;
 
     // Variable to store turn
-    
+
     public Action<bool> TurnChanged;
     private bool _isWhiteTurn;
+
     public bool IsWhiteTurn
     {
         get => _isWhiteTurn;
@@ -73,12 +79,19 @@ public class BoardManager : MonoBehaviour
     private void Update()
     {
         // Update Selected tile
-        UpdateSelection();
+        try
+        {
+            UpdateSelection();
+        }
+        catch
+        {
+        }
+
         // Draw chessboard in every frame update
         DrawChessBoard();
 
         // Select/Move chessman on mouse click & it is Player's turn : White
-        if(Input.GetMouseButtonDown(0) && IsWhiteTurn)
+        if (Input.GetMouseButtonDown(0) && IsWhiteTurn)
         {
             if (selectionX >= 0 && selectionY >= 0 && selectionX <= 7 && selectionY <= 7)
             {
@@ -95,12 +108,11 @@ public class BoardManager : MonoBehaviour
             }
         }
         // // If it is NPC's turn : Black
-        else if(!IsWhiteTurn)
+        else if (!IsWhiteTurn)
         {
             // NPC will make a move
             ChessAI.Instance.NPCMove();
         }
-        
     }
 
     private void SelectChessman()
@@ -121,36 +133,35 @@ public class BoardManager : MonoBehaviour
 
     public void MoveChessman(int x, int y)
     {
-        if(allowedMoves[x,y])
+        if (allowedMoves[x, y])
         {
             Chessman opponent = Chessmans[x, y];
 
-            if(opponent != null)
+            if (opponent != null)
             {
                 // Capture an opponent piece
                 ActiveChessmans.Remove(opponent.gameObject);
                 Destroy(opponent.gameObject);
-
             }
+
             // -------EnPassant Move Manager------------
             // If it is an EnPassant move than Destroy the opponent
             if (EnPassant[0] == x && EnPassant[1] == y && SelectedChessman.GetType() == typeof(Pawn))
             {
-                if(IsWhiteTurn)
+                if (IsWhiteTurn)
                     opponent = Chessmans[x, y + 1];
                 else
                     opponent = Chessmans[x, y - 1];
 
                 ActiveChessmans.Remove(opponent.gameObject);
                 Destroy(opponent.gameObject);
-
             }
 
             // Reset the EnPassant move
             EnPassant[0] = EnPassant[1] = -1;
 
             // Set EnPassant available for opponent
-            if(SelectedChessman.GetType() == typeof(Pawn))
+            if (SelectedChessman.GetType() == typeof(Pawn))
             {
                 //-------Promotion Move Manager------------
                 if (y == 7)
@@ -160,6 +171,7 @@ public class BoardManager : MonoBehaviour
                     SpawnChessman(10, new Vector3(x, 0, y));
                     SelectedChessman = Chessmans[x, y];
                 }
+
                 if (y == 0)
                 {
                     ActiveChessmans.Remove(SelectedChessman.gameObject);
@@ -168,12 +180,13 @@ public class BoardManager : MonoBehaviour
                     SelectedChessman = Chessmans[x, y];
                 }
                 //-------Promotion Move Manager Over-------
-                
+
                 if (SelectedChessman.currentY == 1 && y == 3)
                 {
                     EnPassant[0] = x;
                     EnPassant[1] = y - 1;
                 }
+
                 if (SelectedChessman.currentY == 6 && y == 4)
                 {
                     EnPassant[0] = x;
@@ -184,10 +197,10 @@ public class BoardManager : MonoBehaviour
 
             // -------Castling Move Manager------------
             // If the selectef chessman is King and is trying Castling move which needs two steps
-            if(SelectedChessman.GetType() == typeof(King) && System.Math.Abs(x - SelectedChessman.currentX) == 2)
+            if (SelectedChessman.GetType() == typeof(King) && System.Math.Abs(x - SelectedChessman.currentX) == 2)
             {
                 // King Side (towards (0, 0))
-                if(x - SelectedChessman.currentX < 0)
+                if (x - SelectedChessman.currentX < 0)
                 {
                     // Moving Rook1
                     Chessmans[x + 1, y] = Chessmans[x - 1, y];
@@ -229,20 +242,20 @@ public class BoardManager : MonoBehaviour
         // ------- King Check Alert Manager -----------
         // Is it Check to the King
         // If now White King is in Check
-        if(IsWhiteTurn)
+        if (IsWhiteTurn)
         {
-            if(WhiteKing.InDanger())
+            if (WhiteKing.InDanger())
                 BoardHighlights.Instance.SetTileCheck(WhiteKing.currentX, WhiteKing.currentY);
         }
         // If now Black King is in Check
         else
         {
-            if(BlackKing.InDanger())
+            if (BlackKing.InDanger())
                 BoardHighlights.Instance.SetTileCheck(BlackKing.currentX, BlackKing.currentY);
         }
         // ------- King Check Alert Manager Over ----
 
-       
+
         // Check if it is Checkmate
         isCheckmate();
     }
@@ -267,7 +280,6 @@ public class BoardManager : MonoBehaviour
         }
         catch (Exception e)
         {
-          
         }
     }
 
@@ -276,35 +288,36 @@ public class BoardManager : MonoBehaviour
         Vector3 widthLine = Vector3.right * 8;
         Vector3 heightLine = Vector3.forward * 8;
         Vector3 offset = new Vector3(0.5f, 0f, 0.5f);
-        for (int i=0; i<=8; i++)
+        for (int i = 0; i <= 8; i++)
         {
             Vector3 start = Vector3.forward * i - offset;
             Debug.DrawLine(start, start + widthLine);
-            for(int j=0; j<=8; j++)
+            for (int j = 0; j <= 8; j++)
             {
                 start = Vector3.right * i - offset;
                 Debug.DrawLine(start, start + heightLine);
             }
         }
-        
+
 
         // Draw Selection
-        if(selectionX >= 0 && selectionY >= 0 && selectionX <= 7 && selectionY <= 7)
+        if (selectionX >= 0 && selectionY >= 0 && selectionX <= 7 && selectionY <= 7)
         {
             Debug.DrawLine(
                 Vector3.forward * selectionY + Vector3.right * selectionX - offset,
                 Vector3.forward * (selectionY + 1) + Vector3.right * (selectionX + 1) - offset
-                );
+            );
             Debug.DrawLine(
                 Vector3.forward * (selectionY + 1) + Vector3.right * selectionX - offset,
                 Vector3.forward * selectionY + Vector3.right * (selectionX + 1) - offset
-                );
+            );
         }
     }
 
     private void SpawnChessman(int index, Vector3 position)
     {
-        GameObject ChessmanObject = Instantiate(ChessmanPrefabs[index], position, ChessmanPrefabs[index].transform.rotation) as GameObject;
+        GameObject ChessmanObject =
+            Instantiate(ChessmanPrefabs[index], position, ChessmanPrefabs[index].transform.rotation) as GameObject;
         ChessmanObject.transform.SetParent(this.transform);
         ActiveChessmans.Add(ChessmanObject);
 
@@ -312,9 +325,8 @@ public class BoardManager : MonoBehaviour
         int y = (int)(position.z);
         Chessmans[x, y] = ChessmanObject.GetComponent<Chessman>();
         Chessmans[x, y].SetPosition(x, y);
-
     }
-    
+
     private void SpawnAllChessmans()
     {
         // Spawn White Pieces
@@ -335,7 +347,7 @@ public class BoardManager : MonoBehaviour
         // Rook2
         SpawnChessman(0, new Vector3(7, 0, 7));
         // Pawns
-        for(int i=0; i<8; i++)
+        for (int i = 0; i < 8; i++)
         {
             SpawnChessman(5, new Vector3(i, 0, 6));
         }
@@ -385,46 +397,51 @@ public class BoardManager : MonoBehaviour
         // New Game
         IsWhiteTurn = true;
         BoardHighlights.Instance.DisableAllHighlights();
-        SpawnAllChessmans();
+        
+        GameOver.Instance.GameOverMenu(IsWhiteTurn);
+
+        // SpawnAllChessmans();
     }
 
     private void isCheckmate()
     {
         bool hasAllowedMove = false;
-        foreach(GameObject chessman in ActiveChessmans)
+        foreach (GameObject chessman in ActiveChessmans)
         {
-            if(chessman.GetComponent<Chessman>().isWhite != IsWhiteTurn)
+            if (chessman.GetComponent<Chessman>().isWhite != IsWhiteTurn)
                 continue;
 
             bool[,] allowedMoves = chessman.GetComponent<Chessman>().PossibleMoves();
 
-            for(int x=0; x<8; x++)
+            for (int x = 0; x < 8; x++)
             {
-                for(int y=0; y<8; y++)
+                for (int y = 0; y < 8; y++)
                 {
-                    if(allowedMoves[x, y])
+                    if (allowedMoves[x, y])
                     {
                         hasAllowedMove = true;
                         break;
                     }
                 }
-                if(hasAllowedMove) break;
+
+                if (hasAllowedMove) break;
             }
         }
 
-        if(!hasAllowedMove) 
+        if (!hasAllowedMove)
         {
             BoardHighlights.Instance.HighlightCheckmate(IsWhiteTurn);
 
             Debug.Log("CheckMate");
 
-            Debug.Log("Average Response Time of computer (in seconds): " + (ChessAI.Instance.averageResponseTime/1000.0));
+            Debug.Log("Average Response Time of computer (in seconds): " +
+                      (ChessAI.Instance.averageResponseTime / 1000.0));
 
             // Display Game Over Menu
-            GameOver.Instance.GameOverMenu();
+            EndGame();
 
-            // EndGame();
         }
+        
     }
 
     //to be deleted
