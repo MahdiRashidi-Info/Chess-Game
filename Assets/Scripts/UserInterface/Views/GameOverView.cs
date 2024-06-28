@@ -5,9 +5,9 @@ using RTLTMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOver : MonoBehaviour
+public class GameOverView : MonoBehaviour
 {
-    public static GameOver Instance { set; get; }
+    public static GameOverView Instance { set; get; }
 
     public GameObject gameOverUI;
     [SerializeField] private AvatarFrameComponent firstPlayer;

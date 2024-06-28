@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UpdateWinner : MonoBehaviour
+public class UpdateWinnerView : MonoBehaviour
 {
-	public static UpdateWinner Instance { set; get; }
+	public static UpdateWinnerView Instance { set; get; }
 
 	public Text winner;
 

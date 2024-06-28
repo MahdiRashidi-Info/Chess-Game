@@ -398,7 +398,7 @@ public class BoardManager : MonoBehaviour
         IsWhiteTurn = true;
         BoardHighlights.Instance.DisableAllHighlights();
         
-        GameOver.Instance.GameOverMenu(IsWhiteTurn);
+        GameOverView.Instance.GameOverMenu(IsWhiteTurn);
 
         // SpawnAllChessmans();
     }
