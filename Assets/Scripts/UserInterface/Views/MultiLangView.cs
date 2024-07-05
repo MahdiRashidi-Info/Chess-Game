@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using ChessGame;
 using ChessGame.Extensions;
 using ChessGame.UserInterface.Controllers;
 using UnityEngine;
@@ -20,7 +22,14 @@ namespace UserInterface.Views
             {
                 variable.transform.GetChild(0).gameObject
                     .SetActive(variable.name == MultiLanguageController.Instance.CurrentLanguage);
-                variable.AddCustomListener(() => MultiLanguageController.Instance.ChangeLanguage(variable.name));
+                variable.AddCustomListener(async () =>
+                {
+                    MultiLanguageController.Instance.ChangeLanguage(variable.name);
+
+                    await Task.Delay(TimeSpan.FromSeconds(2));
+                    
+                    Utils.RestartApp();
+                });
             }
 
             backBtn.AddCustomListener(() => gameObject.SetActive(false));
