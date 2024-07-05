@@ -21,8 +21,19 @@ namespace ChessGame.UserInterface.Controllers
             settingBtn.AddCustomListener(() => { settingView.SetActive(true); });
 
             closeBtn.AddCustomListener(() => settingView.SetActive(false));
-            rateBtn.AddCustomListener(() => { rateView.Open(); });
-            supportBtn.AddCustomListener(() => { });
+            rateBtn.AddCustomListener(() =>
+            {
+                rateView.Open(() =>
+                {
+                    
+                    var configValue = Utils.GetConfigValue();
+                    if (configValue.iap == "bazaar")
+                        Utils.OpenCafeBazaarRateUs();
+                    else
+                        Utils.OpenMyketRateUs();
+                });
+            });
+            supportBtn.AddCustomListener(Utils.ContactSupport);
             changeLanguageBtn.AddCustomListener(() => { });
         }
     }
