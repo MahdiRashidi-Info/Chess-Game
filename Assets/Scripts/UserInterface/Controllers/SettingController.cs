@@ -2,12 +2,14 @@ using ChessGame.Extensions;
 using ChessGame.UserInterface.Views;
 using UnityEngine;
 using UnityEngine.UI;
+using UserInterface.Views;
 
 namespace ChessGame.UserInterface.Controllers
 {
     public class SettingController : MonoBehaviour
     {
         [SerializeField] private GameObject settingView;
+        [SerializeField] private MultiLangView settingLangView;
         [SerializeField] private RateView rateView;
         [SerializeField] private Button settingBtn;
 
@@ -34,7 +36,10 @@ namespace ChessGame.UserInterface.Controllers
                 });
             });
             supportBtn.AddCustomListener(Utils.ContactSupport);
-            changeLanguageBtn.AddCustomListener(() => { });
+            changeLanguageBtn.AddCustomListener(() =>
+            {
+                settingLangView.Fetch();
+            });
         }
     }
 }

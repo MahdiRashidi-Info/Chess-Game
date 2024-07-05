@@ -9,7 +9,6 @@ namespace ChessGame
         public static ConfigModel GetConfigValue()
         {
             var textAsset = Resources.Load<TextAsset>("config");
-            Debug.Log(textAsset.text);
             return JsonUtility.FromJson<ConfigModel>(textAsset.text);
         }
         public static void ContactSupport()
