@@ -1,296 +1,548 @@
 [
   {
-    "word_key" : "game_title",
-    "values" : [
+    "word_key": "game_title",
+    "values": [
       {
-        "lang_key" : "persian", 
-        "lang_value" : "بازی شطرنج"
+        "lang_key": "persian",
+        "lang_value": "بازی شطرنج"
       },
       {
-        "lang_key" : "english", 
-        "lang_value" : "Chess Game"
+        "lang_key": "english",
+        "lang_value": "Chess Game"
       },
       {
-        "lang_key" : "germany", 
-        "lang_value" : "Schach"
+        "lang_key": "germany",
+        "lang_value": "Schach"
       },
       {
-        "lang_key" : "turkey", 
-        "lang_value" : "Satranç"
+        "lang_key": "turkey",
+        "lang_value": "Satranç"
       }
     ]
   },
   {
-    "word_key" : "1v1",
-    "values" : [
+    "word_key": "1v1",
+    "values": [
       {
-        "lang_key" : "persian", 
-        "lang_value" : "1v1"
+        "lang_key": "persian",
+        "lang_value": "1v1"
       },
       {
-        "lang_key" : "english", 
-        "lang_value" : "1v1"
+        "lang_key": "english",
+        "lang_value": "1v1"
       },
       {
-        "lang_key" : "germany", 
-        "lang_value" : "1v1"
+        "lang_key": "germany",
+        "lang_value": "1v1"
       },
       {
-        "lang_key" : "turkey", 
-        "lang_value" : "1v1"
+        "lang_key": "turkey",
+        "lang_value": "1v1"
       }
     ]
   },
   {
-    "word_key" : "VsCpu",
-    "values" : [
+    "word_key": "VsCpu",
+    "values": [
       {
-        "lang_key" : "persian", 
-        "lang_value" : "با هوش مصنوعی"
+        "lang_key": "persian",
+        "lang_value": "با هوش مصنوعی"
       },
       {
-        "lang_key" : "english", 
-        "lang_value" : "VS CPU"
+        "lang_key": "english",
+        "lang_value": "VS CPU"
       },
       {
-        "lang_key" : "germany", 
-        "lang_value" : "Gegen CPU"
+        "lang_key": "germany",
+        "lang_value": "Gegen CPU"
       },
       {
-        "lang_key" : "turkey", 
-        "lang_value" : "CPU'ya Karşı"
+        "lang_key": "turkey",
+        "lang_value": "CPU'ya Karşı"
       }
     ]
   },
   {
-    "word_key" : "shop_label",
-    "values" : [
+    "word_key": "shop_label",
+    "values": [
       {
-        "lang_key" : "persian", 
-        "lang_value" : "فروشگاه"
+        "lang_key": "persian",
+        "lang_value": "فروشگاه"
       },
       {
-        "lang_key" : "english", 
-        "lang_value" : "Shop"
+        "lang_key": "english",
+        "lang_value": "Shop"
       },
       {
-        "lang_key" : "germany", 
-        "lang_value" : "Geschäft"
+        "lang_key": "germany",
+        "lang_value": "Geschäft"
       },
       {
-        "lang_key" : "turkey", 
-        "lang_value" : "mağaza"
+        "lang_key": "turkey",
+        "lang_value": "mağaza"
       }
     ]
   },
   {
-    "word_key" : "settings",
-    "values" : [
+    "word_key": "settings",
+    "values": [
       {
-        "lang_key" : "persian", 
-        "lang_value" : "تنظیمات"
+        "lang_key": "persian",
+        "lang_value": "تنظیمات"
       },
       {
-        "lang_key" : "english", 
-        "lang_value" : "Settings"
+        "lang_key": "english",
+        "lang_value": "Settings"
       },
       {
-        "lang_key" : "germany", 
-        "lang_value" : "Einstellungen"
+        "lang_key": "germany",
+        "lang_value": "Einstellungen"
       },
       {
-        "lang_key" : "turkey", 
-        "lang_value" : "Ayarlar"
+        "lang_key": "turkey",
+        "lang_value": "Ayarlar"
       }
     ]
   },
   {
-    "word_key" : "rate",
-    "values" : [
+    "word_key": "rate",
+    "values": [
       {
-        "lang_key" : "persian", 
-        "lang_value" : "امتیازدهی"
+        "lang_key": "persian",
+        "lang_value": "امتیازدهی"
       },
       {
-        "lang_key" : "english", 
-        "lang_value" : "Rate"
+        "lang_key": "english",
+        "lang_value": "Rate"
       },
       {
-        "lang_key" : "germany", 
-        "lang_value" : "rate Spiel"
+        "lang_key": "germany",
+        "lang_value": "rate Spiel"
       },
       {
-        "lang_key" : "turkey", 
-        "lang_value" : "oran oyunu"
+        "lang_key": "turkey",
+        "lang_value": "oran oyunu"
       }
     ]
   },
   {
-    "word_key" : "support",
-    "values" : [
+    "word_key": "support",
+    "values": [
       {
-        "lang_key" : "persian", 
-        "lang_value" : "پشتیبانی"
+        "lang_key": "persian",
+        "lang_value": "پشتیبانی"
       },
       {
-        "lang_key" : "english", 
-        "lang_value" : "Support"
+        "lang_key": "english",
+        "lang_value": "Support"
       },
       {
-        "lang_key" : "germany", 
-        "lang_value" : "Destek"
+        "lang_key": "germany",
+        "lang_value": "Destek"
       },
       {
-        "lang_key" : "turkey", 
-        "lang_value" : "Unterstützung"
-      }
-    ]
-  }, 
-  {
-    "word_key" : "no",
-    "values" : [
-      {
-        "lang_key" : "persian", 
-        "lang_value" : "الان نه!"
-      },
-      {
-        "lang_key" : "english", 
-        "lang_value" : "No!"
-      },
-      {
-        "lang_key" : "germany", 
-        "lang_value" : "NEIN!"
-      },
-      {
-        "lang_key" : "turkey", 
-        "lang_value" : "HAYIR!"
+        "lang_key": "turkey",
+        "lang_value": "Unterstützung"
       }
     ]
   },
   {
-    "word_key" : "rate_detail",
-    "values" : [
+    "word_key": "no",
+    "values": [
       {
-        "lang_key" : "persian", 
-        "lang_value" : "به بازی امتیاز بدهید!"
+        "lang_key": "persian",
+        "lang_value": "الان نه!"
       },
       {
-        "lang_key" : "english", 
-        "lang_value" : "Leave 5 star ratings in the App Store!"
+        "lang_key": "english",
+        "lang_value": "No!"
       },
       {
-        "lang_key" : "germany", 
-        "lang_value" : "Hinterlassen Sie 5-Sterne-Bewertungen im App Store!"
+        "lang_key": "germany",
+        "lang_value": "NEIN!"
       },
       {
-        "lang_key" : "turkey", 
-        "lang_value" : "App Store'da 5 yıldız derecelendirmesi bırakın!"
+        "lang_key": "turkey",
+        "lang_value": "HAYIR!"
       }
     ]
   },
   {
-    "word_key" : "rate_label",
-    "values" : [
+    "word_key": "yes",
+    "values": [
       {
-        "lang_key" : "persian", 
-        "lang_value" : "آیا از بازی شطرنج لذت برده اید؟"
+        "lang_key": "persian",
+        "lang_value": "متوجه شدم!"
       },
       {
-        "lang_key" : "english", 
-        "lang_value" : "Have you enjoyed the Chess game?"
+        "lang_key": "english",
+        "lang_value": "Ok!"
       },
       {
-        "lang_key" : "germany", 
-        "lang_value" : "Hat Ihnen das Schachspiel gefallen?"
+        "lang_key": "germany",
+        "lang_value": "OK!"
       },
       {
-        "lang_key" : "turkey", 
-        "lang_value" : "Satranç oyunundan keyif aldınız mı?"
+        "lang_key": "turkey",
+        "lang_value": "Tamam!"
       }
     ]
   },
   {
-    "word_key" : "rate_label",
-    "values" : [
+    "word_key": "rate_detail",
+    "values": [
       {
-        "lang_key" : "persian", 
-        "lang_value" : "آیا از بازی شطرنج لذت برده اید؟"
+        "lang_key": "persian",
+        "lang_value": "به بازی امتیاز بدهید!"
       },
       {
-        "lang_key" : "english", 
-        "lang_value" : "Have you enjoyed the Chess game?"
+        "lang_key": "english",
+        "lang_value": "Leave 5 star ratings in the App Store!"
       },
       {
-        "lang_key" : "germany", 
-        "lang_value" : "Hat Ihnen das Schachspiel gefallen?"
+        "lang_key": "germany",
+        "lang_value": "Hinterlassen Sie 5-Sterne-Bewertungen im App Store!"
       },
       {
-        "lang_key" : "turkey", 
-        "lang_value" : "Satranç oyunundan keyif aldınız mı?"
+        "lang_key": "turkey",
+        "lang_value": "App Store'da 5 yıldız derecelendirmesi bırakın!"
       }
     ]
   },
   {
-    "word_key" : "ads_label",
-    "values" : [
+    "word_key": "rate_label",
+    "values": [
       {
-        "lang_key" : "persian", 
-        "lang_value" : "هرچقدر میخواهی بگیر"
+        "lang_key": "persian",
+        "lang_value": "آیا از بازی شطرنج لذت برده اید؟"
       },
       {
-        "lang_key" : "english", 
-        "lang_value" : "Earn How many You Want"
+        "lang_key": "english",
+        "lang_value": "Have you enjoyed the Chess game?"
       },
       {
-        "lang_key" : "germany", 
-        "lang_value" : "Verdienen Sie, wie viel Sie wollen"
+        "lang_key": "germany",
+        "lang_value": "Hat Ihnen das Schachspiel gefallen?"
       },
       {
-        "lang_key" : "turkey", 
-        "lang_value" : "Dilediğiniz Kadar Kazanın"
+        "lang_key": "turkey",
+        "lang_value": "Satranç oyunundan keyif aldınız mı?"
       }
     ]
   },
   {
-    "word_key" : "ads_detail",
-    "values" : [
+    "word_key": "rate_label",
+    "values": [
       {
-        "lang_key" : "persian", 
-        "lang_value" : "تبلیغ ببین"
+        "lang_key": "persian",
+        "lang_value": "آیا از بازی شطرنج لذت برده اید؟"
       },
       {
-        "lang_key" : "english", 
-        "lang_value" : "Watch Ads"
+        "lang_key": "english",
+        "lang_value": "Have you enjoyed the Chess game?"
       },
       {
-        "lang_key" : "germany", 
-        "lang_value" : "Werbung ansehen"
+        "lang_key": "germany",
+        "lang_value": "Hat Ihnen das Schachspiel gefallen?"
       },
       {
-        "lang_key" : "turkey", 
-        "lang_value" : "reklamları izle"
+        "lang_key": "turkey",
+        "lang_value": "Satranç oyunundan keyif aldınız mı?"
       }
     ]
   },
   {
-    "word_key" : "language",
-    "values" : [
+    "word_key": "ads_label",
+    "values": [
       {
-        "lang_key" : "persian", 
-        "lang_value" : "زبان بازی"
+        "lang_key": "persian",
+        "lang_value": "هرچقدر میخواهی بگیر"
       },
       {
-        "lang_key" : "english", 
-        "lang_value" : "Language"
+        "lang_key": "english",
+        "lang_value": "Earn How many You Want"
       },
       {
-        "lang_key" : "germany", 
-        "lang_value" : "Sprache"
+        "lang_key": "germany",
+        "lang_value": "Verdienen Sie, wie viel Sie wollen"
       },
       {
-        "lang_key" : "turkey", 
-        "lang_value" : "Dil"
+        "lang_key": "turkey",
+        "lang_value": "Dilediğiniz Kadar Kazanın"
       }
     ]
   },
+  {
+    "word_key": "ads_detail",
+    "values": [
+      {
+        "lang_key": "persian",
+        "lang_value": "تبلیغ ببین"
+      },
+      {
+        "lang_key": "english",
+        "lang_value": "Watch Ads"
+      },
+      {
+        "lang_key": "germany",
+        "lang_value": "Werbung ansehen"
+      },
+      {
+        "lang_key": "turkey",
+        "lang_value": "reklamları izle"
+      }
+    ]
+  },
+  {
+    "word_key": "language",
+    "values": [
+      {
+        "lang_key": "persian",
+        "lang_value": "زبان بازی"
+      },
+      {
+        "lang_key": "english",
+        "lang_value": "Language"
+      },
+      {
+        "lang_key": "germany",
+        "lang_value": "Sprache"
+      },
+      {
+        "lang_key": "turkey",
+        "lang_value": "Dil"
+      }
+    ]
+  },
+  {
+    "word_key": "yourUsername",
+    "values": [
+      {
+        "lang_key": "persian",
+        "lang_value": "نام کاربری شما؟"
+      },
+      {
+        "lang_key": "english",
+        "lang_value": "Your Username ?"
+      },
+      {
+        "lang_key": "germany",
+        "lang_value": "Dein Benutzername ?"
+      },
+      {
+        "lang_key": "turkey",
+        "lang_value": "Kullanıcı adınızı ?"
+      }
+    ]
+  },
+  {
+    "word_key": "save",
+    "values": [
+      {
+        "lang_key": "persian",
+        "lang_value": "ذخیره"
+      },
+      {
+        "lang_key": "english",
+        "lang_value": "Save"
+      },
+      {
+        "lang_key": "germany",
+        "lang_value": "Speichern"
+      },
+      {
+        "lang_key": "turkey",
+        "lang_value": "Kaydetmek"
+      }
+    ]
+  },
+  {
+    "word_key": "enterText",
+    "values": [
+      {
+        "lang_key": "persian",
+        "lang_value": "عبارت را وارد کنید!"
+      },
+      {
+        "lang_key": "english",
+        "lang_value": "Enter text"
+      },
+      {
+        "lang_key": "germany",
+        "lang_value": "Text eingeben"
+      },
+      {
+        "lang_key": "turkey",
+        "lang_value": "Metni girin"
+      }
+    ]
+  },
+  {
+    "word_key": "startGame",
+    "values": [
+      {
+        "lang_key": "persian",
+        "lang_value": "شروع بازی"
+      },
+      {
+        "lang_key": "english",
+        "lang_value": "Start Game"
+      },
+      {
+        "lang_key": "germany",
+        "lang_value": "Spiel beginnen"
+      },
+      {
+        "lang_key": "turkey",
+        "lang_value": "Oyunu başlatmak"
+      }
+    ]
+  },
+  {
+    "word_key": "opponentName",
+    "values": [
+      {
+        "lang_key": "persian",
+        "lang_value": "نام حریف را وارد کنید"
+      },
+      {
+        "lang_key": "english",
+        "lang_value": "Enter Opponent Name"
+      },
+      {
+        "lang_key": "germany",
+        "lang_value": "Geben Sie den Namen des Gegners ein"
+      },
+      {
+        "lang_key": "turkey",
+        "lang_value": "Rakibin Adını Girin"
+      }
+    ]
+  },
+  {
+    "word_key": "pauseLabel",
+    "values": [
+      {
+        "lang_key": "persian",
+        "lang_value": "توقف بازی"
+      },
+      {
+        "lang_key": "english",
+        "lang_value": "Game Paused"
+      },
+      {
+        "lang_key": "germany",
+        "lang_value": "Das Spiel pausiert"
+      },
+      {
+        "lang_key": "turkey",
+        "lang_value": "Oyun duraklatıldı"
+      }
+    ]
+  },
+  {
+    "word_key": "resume",
+    "values": [
+      {
+        "lang_key": "persian",
+        "lang_value": "ادامه بازی"
+      },
+      {
+        "lang_key": "english",
+        "lang_value": "Resume Game"
+      },
+      {
+        "lang_key": "germany",
+        "lang_value": "Spiel fortsetzen"
+      },
+      {
+        "lang_key": "turkey",
+        "lang_value": "Oyuna devam et"
+      }
+    ]
+  },
+  {
+    "word_key": "resetgame",
+    "values": [
+      {
+        "lang_key": "persian",
+        "lang_value": "شروع مجدد"
+      },
+      {
+        "lang_key": "english",
+        "lang_value": "Restart Game"
+      },
+      {
+        "lang_key": "germany",
+        "lang_value": "Spiel neustarten"
+      },
+      {
+        "lang_key": "turkey",
+        "lang_value": "Oyunu yeniden başlat"
+      }
+    ]
+  },
+  {
+    "word_key": "quitGame",
+    "values": [
+      {
+        "lang_key": "persian",
+        "lang_value": "خروج از بازی"
+      },
+      {
+        "lang_key": "english",
+        "lang_value": "Quit Game"
+      },
+      {
+        "lang_key": "germany",
+        "lang_value": "Spiel verlassen"
+      },
+      {
+        "lang_key": "turkey",
+        "lang_value": "Oyundan çık"
+      }
+    ]
+  },
+  {
+    "word_key": "playAgain",
+    "values": [
+      {
+        "lang_key": "persian",
+        "lang_value": "شروع مجدد"
+      },
+      {
+        "lang_key": "english",
+        "lang_value": "Play Again"
+      },
+      {
+        "lang_key": "germany",
+        "lang_value": "Nochmal abspielen"
+      },
+      {
+        "lang_key": "turkey",
+        "lang_value": "Tekrar oyna"
+      }
+    ]
+  },
+  {
+    "word_key": "mainmenu",
+    "values": [
+      {
+        "lang_key": "persian",
+        "lang_value": "منو اصلی"
+      },
+      {
+        "lang_key": "english",
+        "lang_value": "Main Menu"
+      },
+      {
+        "lang_key": "germany",
+        "lang_value": "Hauptmenü"
+      },
+      {
+        "lang_key": "turkey",
+        "lang_value": "Ana menü"
+      }
+    ]
+  }
 ]

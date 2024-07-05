@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using ChessGame.Extensions;
 using RTLTMPro;
@@ -12,6 +13,13 @@ namespace ChessGame.UserInterface.Views
         [SerializeField] private Button watchAdsBtn;
         [SerializeField] private List<Button> coinPacks;
         [SerializeField] private RTLTextMeshPro coinText;
+
+        public static ShopView Instance;
+
+        private void Awake()
+        {
+            Instance = this;
+        }
 
         public void Open(int coinValue)
         {

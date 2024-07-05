@@ -25,10 +25,13 @@ namespace UserInterface.Views
                 variable.AddCustomListener(async () =>
                 {
                     MultiLanguageController.Instance.ChangeLanguage(variable.name);
-
-                    await Task.Delay(TimeSpan.FromSeconds(2));
+                    MessageBoxController.Instance.Show("The Language has been Changed" , () =>
+                    {
+                    });
+                    await Task.Delay(TimeSpan.FromSeconds(1));
                     
-                    Utils.RestartApp();
+                    if(Application.platform == RuntimePlatform.Android)
+                        Utils.RestartApp();
                 });
             }
 
