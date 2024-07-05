@@ -7,7 +7,7 @@ namespace IapSystem
     public static class IapSystemHelper
     {
         private const string MyketPublicKey =
-            "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCWP9UBs9vtiwDl59Ex7a513BpxTW00sl5mWzqDuZVJcl02bgbizeQa9R7hZ2it/td89NG/9EhebRs5K2HUhuNfGArD3zZ2AWVedLUddXwKMEtfV3epWIsdDSG+q0u7yJe2ZnvH2fJqgftV2fW2Zp+bQgiSEvGtIZrhEcRjachPhwIDAQAB";
+            "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDWY94Fk2/lPV6Lz78vnF0nI8+G2TMEhwP4vQqzCI6L2W9WLWW1tLM8bjgs2dGjR6c3Akb75W7/ajdF1OS9+jVM1mNgYgR5SijJPzpbyOd5fc84/mWh4BFhN9GiFIKjJjV/DxuVWwovBP2waz93ZOG373+Ctf0ei3kHLNX7y7w23QIDAQAB";
 
         private const string BazaarPublicKey =
             "MIHNMA0GCSqGSIb3DQEBAQUAA4G7ADCBtwKBrwDf/AFhgMUWWchug1iKLFggHN5Y1ihRWeOo5jbm8hVr21MWEpcTnbGX+mLvewcxxhX9IC38PRdDBkOsGFrGa96Bx6PyYPHGKyax9y1hq7b8h3Ryf1tv/qE2Z6iT7BOow6Yr5YdQm2V1X8NU6wVI/7LXa8vq4uqSXX4DQVFMaMdnvD3IROVOEcrjOBst67j83Nrj8U1NEVwGk7uqP1GV+Qw9SZ2HE/6ib4rgqGteOGMCAwEAAQ==";
